@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="400">
+            <Grid HorizontalAlignment="Left" Height="45" Margin="10,67,0,0" VerticalAlignment="Top" Width="287">
+                <Label Content="Temp:" HorizontalAlignment="Left" Margin="3,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label Name="label_Temp_value" Content="" HorizontalAlignment="Left" Margin="77,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Loaded="label_Temp_value_Loaded"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="45" Margin="10,125,0,0" VerticalAlignment="Top" Width="287">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="121*"/>
+                    <ColumnDefinition Width="166*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Humi:" HorizontalAlignment="Left" Margin="3,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label Name="label_Humi_value" Content="" HorizontalAlignment="Left" Margin="77,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Loaded="label_Humi_value_Loaded"/>
+            </Grid>
+            <Label Content="自动化" HorizontalAlignment="Left" Margin="128,10,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+            <Grid HorizontalAlignment="Left" Height="110" Margin="0,175,0,0" VerticalAlignment="Top" Width="390">
+                <Label Content="Mix" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Max" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top"/>
+                <Button Name="btn_Add_Value" Content="确定" HorizontalAlignment="Left" Margin="55,76,0,0" VerticalAlignment="Top" Width="120" Click="btn_Add_Value_Click"/>
+                <TextBox Name="Text_Mix_Temp" HorizontalAlignment="Left" Height="23" Margin="55,12,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox Name="Text_Max_Temp" HorizontalAlignment="Left" Height="23" Margin="55,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Label Content="注意：&#xD;&#xA;      Max温度打开风扇自动降温&#xD;&#xA;      Mix温度打开灯泡自动升温" HorizontalAlignment="Left" Height="83" Margin="190,12,0,0" VerticalAlignment="Top" Width="190" Background="{x:Null}" Foreground="#FFC10606" FontWeight="Bold" FontStyle="Italic"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="78" Margin="0,290,0,0" VerticalAlignment="Top" Width="269">
+                <Label Content="设备状态" HorizontalAlignment="Left" Margin="95,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label Content="风扇:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+                <Label Name="label_Fan" Content="" HorizontalAlignment="Left" Margin="52,50,0,0" VerticalAlignment="Top"/>
+                <Label Content="灯泡" HorizontalAlignment="Left" Margin="153,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.811,0.368"/>
+                <Label Name="label_Light" Content="" HorizontalAlignment="Left" Margin="192,50,0,0" VerticalAlignment="Top"/>
+                <Image Name="img_Fan" HorizontalAlignment="Left" Height="35" Margin="79,43,0,0" VerticalAlignment="Top" Width="37"/>
+                <Image Name="img_Light" HorizontalAlignment="Left" Height="35" Margin="219,40,0,0" VerticalAlignment="Top" Width="37"/>
+            </Grid>
+            <Button Content="历史记录" HorizontalAlignment="Left" Margin="0,390,0,0" VerticalAlignment="Top" Width="75"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="419" Margin="405,0,0,0" VerticalAlignment="Top" Width="387">
+            <Label Content="手动控制" HorizontalAlignment="Left" Margin="132,10,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+            <Button Name="btn_Fan" Content="风扇" HorizontalAlignment="Left" Margin="146,102,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button Name="btn_Light_bulb" Content="灯泡" HorizontalAlignment="Left" Margin="146,136,0,0" VerticalAlignment="Top" Width="75"/>
+        </Grid>
+    </Grid>
+</Window>
